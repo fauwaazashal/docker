@@ -1,0 +1,8 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'asia-south1-docker.pkg.dev/instant-medium-424313-b9/testing-docker-repo/my-image:latest', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'asia-south1-docker.pkg.dev/instant-medium-424313-b9/testing-docker-repo/my-image:latest']
+
+images:
+  - 'asia-south1-docker.pkg.dev/instant-medium-424313-b9/testing-docker-repo/my-image:latest'
